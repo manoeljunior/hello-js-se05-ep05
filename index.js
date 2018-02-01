@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const app = express()
 
 app.use(morgan('dev'))
+app.use(express.static('public'))
 
 app.get('/listcontatos', (req, res) => {
   knex('contato').select().then(contatos => {
