@@ -18,9 +18,27 @@ app.get('/listcontatos', (req, res) => {
   })
 })
 
+app.get('/listprodutos', (req, res) => {
+  knex('produto').select().then(produtos => {
+    res.send(JSON.stringify(produtos))
+  }).catch(err => {
+    res.status(500).send(err)
+    console.log(err)
+  })
+})
+
 app.post('/addcontato', (req, res) => {
   knex('contato').insert(req.body, 'idcontato').then(contato => {
     res.send(contato)
+  }).catch(err => {
+    res.status(500).send(err)
+    console.log(err)
+  })
+})
+
+app.post('/addproduto', (req, res) => {
+  knex('produto').insert(req.body, 'idproduto').then(produto => {
+    res.send(produto)
   }).catch(err => {
     res.status(500).send(err)
     console.log(err)

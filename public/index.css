@@ -5,6 +5,8 @@ h1 {
 body {
   width: 1000px;
   margin: 0 auto;
+  background-color: black;
+  color: white;
 }
 
 .bordado {
@@ -15,5 +17,4 @@ body {
 
 #nome {
   border: 5px double blue;
-
 }
