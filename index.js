@@ -7,7 +7,7 @@ const app = express()
 
 app.use(morgan('dev'))
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/listcontatos', (req, res) => {
   knex('contato').select().then(contatos => {
