@@ -1,0 +1,19 @@
+h1 {
+  font-size:96px;
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.bordado {
+  border: 3px solid darkred;
+  min-height: 100px;
+  max-width: 300px;
+}
+
+#nome {
+  border: 5px double blue;
+
+}
